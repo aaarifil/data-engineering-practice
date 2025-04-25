@@ -1,6 +1,9 @@
-FROM python:latest
+FROM python:3.9-slim
 
-WORKDIR app
-COPY . /app
+WORKDIR /app
+COPY . .
 
-RUN python3 -m pip install -r requirements.txt
+RUN pip install -r requirements.txt
+RUN pip install beautifulsoup4
+
+CMD ["python", "main.py"]
