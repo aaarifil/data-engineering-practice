@@ -1,6 +1,5 @@
-FROM python:latest
-
-WORKDIR app
-COPY . /app
-
-RUN python3 -m pip install -r requirements.txt
+FROM python:3.9-slim
+WORKDIR /app
+COPY . .
+RUN pip install requests
+CMD ["python", "main.py"]
