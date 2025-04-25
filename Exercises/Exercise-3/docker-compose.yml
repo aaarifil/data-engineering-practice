@@ -1,12 +1,13 @@
-version: "3.9"
 services:
   test:
     image: "exercise-3"
     volumes:
       - .:/app
     command: python3 -m pytest
+
   run:
     image: "exercise-3"
+    build: .          # 👈 Thêm dòng này để sử dụng local image
     volumes:
       - .:/app
     command: python3 main.py
