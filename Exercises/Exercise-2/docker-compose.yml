@@ -9,4 +9,5 @@ services:
     image: "exercise-2"
     volumes:
       - .:/app
+      - ./data:/app/data
     command: python3 main.py
